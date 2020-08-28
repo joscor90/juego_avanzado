@@ -16,6 +16,8 @@ def validador(jugador, opcion)
 end
 
 #Lógica del juego
+menu(1)
+opcion_1 = gets.chomp.to_i
 if opcion_1 !=4 
     while ((opcion_1 > 4)  || (opcion_1 < 1)) do
         opcion_1 = validador(1, opcion_1)
@@ -31,14 +33,15 @@ if opcion_1 !=4
             when 1
                 puts "Gana jugador 1" if opcion_2 == 3
                 puts "Gana jugador 2" if opcion_2 == 2
+                puts "Empate" if opcion_2 == 1
             when 2
                 puts "Gana jugador 1" if opcion_2 == 1
                 puts "Gana jugador 2" if opcion_2 == 3
+                puts "Empate" if opcion_2 == 2
             when 3
                 puts "Gana jugador 1" if opcion_2 == 2
                 puts "Gana jugador 2" if opcion_2 == 1
-            when opcion_2
-                puts "Empate"    
+                puts "Empate" if opcion_2 == 3
             end
 
         end
